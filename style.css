@@ -222,6 +222,7 @@ video,img{
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+  height: 100%;
 
   background-color: var(--black)
   border: 2px solid var(--black);
@@ -232,6 +233,18 @@ video,img{
   border-top-right-radius: 15px 225px;
 }
 
+embed, iframe{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--black)
+  border: 2px solid var(--black);
+
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+}
 
 * {
   overflow-wrap:break-word;
