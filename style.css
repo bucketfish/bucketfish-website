@@ -182,7 +182,8 @@ h2 {
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 16px;
-  text-decoration: underline var(--lightblue);
+  text-decoration: underline;
+  text-decoration-color: var(--lightblue);
   text-decoration-thickness: 3px;
 }
 
@@ -198,7 +199,8 @@ a, p, li{
 }
 a {
   color: var(--black);
-  text-decoration: underline var(--lightgreen);
+  text-decoration: underline;
+  text-decoration-color: var(--lightgreen);
   text-decoration-thickness: 3px;
 
 }
