@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+:root {
+    --red: #ffcaca;
+    --orange: #ffedc1;
+    --yellow: #feffb8;
+    --green: #c4ffcb;
+    --lightgreen:#CCD7C5;
+    --darkgreen: #3E885B;
+    --darkblue: #7fb4f5;
+    --blue: #add8ff;
+    --lightblue: #d1e9ff;
+    --mint: #adffe0;
+    --lightpurple:#D8CCF5;
+    --purple: #ccafe9;
+    --white: #fefefa;
+    --black: #454545;
+    --lightgray: #94B0C2;
+    --gray: #ADACB5;
+    --darkgray: #333C57;
+    --rainbow: linear-gradient(to bottom, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+    --rainbowright: linear-gradient(to right, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+}
+
+.wf-loading * {
+  visibility: hidden;
+}
+
+.wf-active * {
+  visibility: visible;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  margin: 16px 0;
+  background-image: var(--rainbow);
+  border: 5px solid var(--lightblue);
+  border-radius: 10px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+  background: transparent;
+
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  border: 2px solid var(--lightgray);
+
+
+}
+
+nav{
+  margin: 20px 0;
+  padding: 5px 20px;
+}
+
+nav *{
+  font-family: Roboto, sans-serif;
+}
+
+/* Style the list */
+ul.breadcrumb {
+  padding: 0;
+  list-style: none;
+  background-color: var(--white);
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-weight: 700;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 4px;
+  color: var(--lightgray);
+  content: "•";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover{
+  font-weight: 700;
+}
+
+
+.border{
+  border: 2px solid var(--black);
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+
+  background-color: var(--white);
+
+}
+
+.normal{
+  padding: 15px 20px;
+  margin: 20px 0;
+}
+
+.border:hover{
+  border-color: var(--lightgray)
+
+
+
+}
+
+
+.small{
+  padding: 5px 20px;
+  width: 40%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+::selection {
+  background: var(--lightgreen);
+
+}
+
+body {
+  background-color: var(--lightblue);
+  color: var(--black);
+  font-family: Merriweather, Georgia, serif;
+  font-weight: normal;
+
+  margin: 0;
+  padding: 0;
+
+  background-size: contain;
+
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 43%;
+  margin: 0 auto;
+
+  padding: 0 80px;
+  height: 100%;
+  overflow-y: scroll;
+  border: 0;
+}
+
+small{
+  font-size: 70%;
+}
+
+
+h1 {
+  font-family: Roboto, sans-serif;
+  line-height: 1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+h2 {
+  font-family: Merriweather, Georgia, serif;
+  color: var(--gray);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-decoration: underline var(--lightblue);
+  text-decoration-thickness: 3px;
+}
+
+h3 {
+  font-family: Roboto, sans-serif;
+  color: var(--black);
+}
+
+a, p, li{
+  font-size: 15px;
+  line-height: 23px;
+
+}
+a {
+  color: var(--black);
+  text-decoration: underline var(--lightgreen);
+  text-decoration-thickness: 3px;
+
+}
+
+a:hover{
+  /*background: var(--lightgreen);*/
+  text-decoration: none;
+  font-weight: 700;
+
+  background: var(--rainbowright);
+  -webkit-background-clip: highlight;
+}
+
+p{
+  font-weight: normal;
+}
+
+
+video,img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+
+  background-color: var(--black)
+  border: 2px solid var(--black);
+
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+}
+
+
+* {
+  overflow-wrap:break-word;
+
+}
