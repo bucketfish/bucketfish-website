@@ -24,9 +24,35 @@ phrases = [
   "i like pineapple on my pizza.",
   "let's be friends instead of fighting okay?",
   "doing a bamboozle fren.",
-  "zjeirb. zjierbness.",
+  "zjierb. zjierbness.",
   "mi jan misali ala li pana sona ala pi toki pona tawa sina.",
   "happy bee day, may 20!",
+  "i think webrings are cool!",
+  "baby shark dududududu.",
+  "sometimes i wonder if anyone ever reads any of these :)",
+  "catch-22 :O",
 ]
-var random = document.getElementById("random");
-random.innerHTML = phrases[Math.floor(Math.random() * phrases.length)]
+try{
+  var random = document.getElementById("random");
+  random.innerHTML = phrases[Math.floor(Math.random() * phrases.length)];
+}
+catch{}
+
+var ripple = document.createElement("div");
+ripple.classList.add("ripple");
+document.getElementsByTagName("body")[0].appendChild(ripple);
+
+//Ripple Event Handler
+var drawRipple = function(ev) {
+  var x = ev.clientX;
+  var y = ev.clientY;
+  var node = document.querySelector(".ripple");
+  var newNode = node.cloneNode(true);
+  newNode.classList.add("animate");
+  newNode.style.left = ev.clientX - 12 + "px";
+  newNode.style.top = ev.clientY - 12 + "px";
+  node.parentNode.replaceChild(newNode, node);
+};
+
+//Ripple Triggers
+window.addEventListener("click", drawRipple);

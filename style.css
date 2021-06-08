@@ -30,23 +30,40 @@
   visibility: visible;
 }
 
-header span{
-  position: relative;
+/*Animate Function*/
+.animate {
+  animation: ripple-mo 1s cubic-bezier(0, 0, 0.2, 1);
+}
+@keyframes ripple-mo {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+.ripple {
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  transform: scale(0);
+  /*background: rgba(0, 0, 0, 0.5);*/
+  border: 0.5px solid;
+  border-color: rgba(173, 215, 255, 1);
+  border-radius: 50%;
+  position: fixed;
+  z-index: -10;
 }
 
 
-/*header span:nth-child(2){
-  animation-delay: 100ms;
-}
-
-header span:nth-child(3){
-  animation-delay: 200ms;
-}
-*/
 
 header span{
   animation-delay: var(--n);
   animation: wave 1s linear var(--n) infinite forwards running, rainbow 3s linear var(--n) infinite forwards running;
+  position: relative;
+
 }
 
 @media screen and (prefers-reduced-motion: reduce;)
