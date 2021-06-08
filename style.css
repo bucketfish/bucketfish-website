@@ -47,8 +47,15 @@ header span:nth-child(3){
 header span{
   animation-delay: var(--n);
   animation: wave 1s linear var(--n) infinite forwards running, rainbow 3s linear var(--n) infinite forwards running;
-
 }
+
+@media screen and (prefers-reduced-motion: reduce;)
+{
+  .header span {
+    animation: none;
+  }
+}
+
 
 @keyframes wave{
   0%    {top: 0px;}
@@ -184,6 +191,7 @@ ul.breadcrumb li a:hover{
   color: var(--lightgray);
 }
 
+
 body {
   background-color: var(--lightblue);
   color: var(--black);
@@ -196,6 +204,7 @@ body {
   background-size: contain;
 
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -204,9 +213,17 @@ body {
   margin: 0 auto;
 
   padding: 0 80px;
-  height: 100%;
+  height: 100vh;
   overflow-y: scroll;
   border: 0;
+}
+
+@media (max-width:720px)
+{
+  .container {
+    width: 80%;
+    padding: 0 5%;
+  }
 }
 
 small{
