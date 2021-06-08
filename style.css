@@ -163,6 +163,10 @@ ul.breadcrumb li a:hover{
   margin: 20px 0;
 }
 
+.border:last-child{
+  margin-bottom: 60px;
+}
+
 .border:hover{
   border-color: var(--lightgray);
   box-shadow: 0px 0px 10px 5px var(--white);
