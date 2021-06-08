@@ -30,21 +30,60 @@
   visibility: visible;
 }
 
-/* width */
+header span{
+  position: relative;
+}
+
+
+/*header span:nth-child(2){
+  animation-delay: 100ms;
+}
+
+header span:nth-child(3){
+  animation-delay: 200ms;
+}
+*/
+
+header span{
+  animation-delay: var(--n);
+  animation: wave 1s linear var(--n) infinite forwards running, rainbow 3s linear var(--n) infinite forwards running;
+
+}
+
+@keyframes wave{
+  0%    {top: 0px;}
+  25%   {top: -2px;}
+  50%   {top: 0px;}
+  75%  {top: 2px;}
+  100% {top: 0px;}
+}
+
+@keyframes rainbow{
+  0% {color: var(--red);}
+  17% {color: var(--orange);}
+  33% {color: var(--yellow);}
+  50% {color: var(--green);}
+  67% {color: var(--blue);}
+  83% {color: var(--purple);}
+  100% {color: var(--red);}
+}
+
+/* ==========SCROLLBAR========== */
 ::-webkit-scrollbar {
   width: 16px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
+  -moz-background-clip: padding;     /* Firefox 3.6 */
+  -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+  background-clip: padding-box;
   margin: 16px 0;
   background-image: var(--rainbow);
-  border: 5px solid var(--lightblue);
+  border: 5px solid rgba(0, 0, 0, 0);
   border-radius: 10px;
 
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
 
@@ -55,13 +94,15 @@
 
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  border: 2px solid var(--lightgray);
+  border: 2px solid var(--white);
+  box-shadow: inset 0 0 6px rgba(254, 254, 250, 1);
 
 
 }
 
+
+/* ==========NAVIGATION========== */
 nav{
   margin: 20px 0;
   padding: 5px 20px;
@@ -71,27 +112,23 @@ nav *{
   font-family: Roboto, sans-serif;
 }
 
-/* Style the list */
 ul.breadcrumb {
   padding: 0;
   list-style: none;
   background-color: var(--white);
 }
 
-/* Display list items side by side */
 ul.breadcrumb li {
   display: inline;
   font-weight: 700;
 }
 
-/* Add a slash symbol (/) before/behind each list item */
 ul.breadcrumb li+li:before {
   padding: 4px;
   color: var(--lightgray);
   content: "•";
 }
 
-/* Add a color to all links inside the list */
 ul.breadcrumb li a {
   font-weight: 400;
   text-decoration: none;
@@ -102,12 +139,13 @@ ul.breadcrumb li a:hover{
 }
 
 
+
 .border{
   border: 2px solid var(--black);
-  border-bottom-left-radius: 15px 255px;
+  border-bottom-left-radius: 20px 255px;
   border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
+  border-top-left-radius: 255px 20px;
+  border-top-right-radius: 20px 225px;
 
   background-color: var(--white);
 
@@ -119,12 +157,17 @@ ul.breadcrumb li a:hover{
 }
 
 .border:hover{
-  border-color: var(--lightgray)
-
-
+  border-color: var(--lightgray);
+  box-shadow: 0px 0px 10px 5px var(--white);
 
 }
 
+.rainbow-text{
+  background-image: var(--rainbowright);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 .small{
   padding: 5px 20px;
@@ -135,7 +178,10 @@ ul.breadcrumb li a:hover{
 
 ::selection {
   background: var(--lightgreen);
+}
 
+.rainbow-text::selection{
+  color: var(--lightgray);
 }
 
 body {
@@ -167,13 +213,14 @@ small{
   font-size: 70%;
 }
 
-
 h1 {
   font-family: Roboto, sans-serif;
   line-height: 1em;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 32px;
+  font-size: 48px;
+  text-shadow: 2px 2px var(--lightgray);
+
 }
 
 h2 {
