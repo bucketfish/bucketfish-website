@@ -32,16 +32,21 @@
 
 /*Animate Function*/
 .animate {
-  animation: ripple-mo 1s cubic-bezier(0, 0, 0.2, 1);
+  animation: ripple-mo 0.6s cubic-bezier(0, 0, 0.2, 1);
 }
 @keyframes ripple-mo {
   0% {
     transform: scale(0);
     opacity: 1;
+    border-width: 0.5px;
+  }
+  70% {
+    border-width: 2px;
   }
   100% {
     transform: scale(10);
     opacity: 0;
+    border-width: 5px;
   }
 }
 .ripple {
@@ -50,11 +55,10 @@
   opacity: 0;
   transform: scale(0);
   /*background: rgba(0, 0, 0, 0.5);*/
-  border: 0.5px solid;
+  border: solid;
   border-color: rgba(173, 215, 255, 1);
   border-radius: 50%;
   position: fixed;
-  z-index: -10;
 }
 
 
@@ -162,7 +166,14 @@ ul.breadcrumb li a:hover{
   font-weight: 700;
 }
 
+.spoiler{
+  background-color: var(--black);
+  color: var(--black);
+}
 
+.spoiler:hover{
+  background-color: var(--gray);
+}
 
 .border{
   border: 2px solid var(--black);
