@@ -59,6 +59,7 @@
   border-color: rgba(173, 215, 255, 1);
   border-radius: 50%;
   position: fixed;
+  z-index: 10;
 }
 
 
