@@ -1,3 +1,4 @@
+/* ========== RAINBOW HEADER ========== */
 var parent = document.getElementsByTagName('header')[0].getElementsByTagName('h1')[0];
 
 var string = parent.innerHTML;
@@ -8,6 +9,7 @@ for (i; i < length; i++) {
     parent.innerHTML += "<span style='--n:"+ (100 * i + 'ms') + ";'>" + string[i] + "</span>";
 }
 
+/* ========== RAINDOMISED MESSAGE ========== */
 phrases = [
   "may i have your kneecaps?",
   "have a nice cup of tea and enjoy your time exploring my world :)",
@@ -38,11 +40,12 @@ try{
 }
 catch{}
 
+
+/* ========== RIPPLE CURSOR ========== */
 var ripple = document.createElement("div");
 ripple.classList.add("ripple");
 document.getElementsByTagName("body")[0].appendChild(ripple);
 
-//Ripple Event Handler
 var drawRipple = function(ev) {
   var x = ev.clientX;
   var y = ev.clientY;
@@ -54,5 +57,4 @@ var drawRipple = function(ev) {
   node.parentNode.replaceChild(newNode, node);
 };
 
-//Ripple Triggers
 window.addEventListener("click", drawRipple);

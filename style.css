@@ -61,7 +61,7 @@ h3 {
   color: var(--black);
 }
 
-a, p, li{
+p, li{
   font-size: 15px;
   line-height: 23px;
 
@@ -81,10 +81,6 @@ a:hover{
 
   background: var(--rainbowright);
   -webkit-background-clip: highlight;
-}
-
-p{
-  font-weight: normal;
 }
 
 video,img{
