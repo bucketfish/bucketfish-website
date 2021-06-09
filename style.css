@@ -21,6 +21,9 @@
     --darkgray: #333C57;
     --rainbow: linear-gradient(to bottom, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
     --rainbowright: linear-gradient(to right, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+
+    --default: url(images/cursor/default.png);
+    --pointer: url(images/cursor/pointer.png);
 }
 
 
@@ -29,6 +32,7 @@
 
 * {
   overflow-wrap:break-word;
+  cursor: var(--default), auto;
 }
 
 small{
@@ -67,6 +71,7 @@ p, li{
 
 }
 a {
+  cursor: var(--pointer), auto;
   font-size: inherit;
   color: var(--black);
   text-decoration: underline;
