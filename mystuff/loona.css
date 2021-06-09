@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+
+:root {
+    --red: #ffcaca;
+    --orange: #ffedc1;
+    --yellow: #feffb8;
+    --green: #c4ffcb;
+    --lightgreen:#CCD7C5;
+    --darkgreen: #3E885B;
+    --darkblue: #7fb4f5;
+    --blue: #add8ff;
+    --lightblue: #d1e9ff;
+    --mint: #adffe0;
+    --lightpurple:#D8CCF5;
+    --purple: #ccafe9;
+    --white: #fefefa;
+    --black: #191919;
+    --lightgray: #94B0C2;
+    --gray: #ADACB5;
+    --darkgray: #333C57;
+    --rainbow: linear-gradient(to bottom, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+    --rainbowright: linear-gradient(to right, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+
+    --heejin: #DE3373;
+    --hyunjin: #FCCA28;
+    --haseul: #08A953;
+    --yeojin: #F5712A;
+    --vivi: #F59EAF;
+    --kimlip: #EE1B3E;
+    --jinsoul: #1E76B8;
+    --choerry: #7C2E87;
+    --yves: #7A0434;
+    --chuu: #F98F81;
+    --gowon: #37BA9B;
+    --olhye: #C0C2C2;
+
+}
+
+
+/* ========== DEFAULT ELEMENTS ==========*/
+
+* {
+  overflow-wrap:break-word;
+}
+p, li{
+  font-size: 16px;
+  line-height: 20px;
+}
+
+h1{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ========== OTHER ==========*/
+
+body{
+  background-color: var(--black);
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  position: absolute;
+  left: 5%;
+  top: 95%;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  color: var(--blue);
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+  box-shadow:
+    inset 3px 7px 12px 1px var(--yves),  /* inner white */
+    5px 3px 5px 2px turquoise, /* middle magenta */
+    20px 0 60px 20px white; /* outer cyan*/
+
+  text-align: center;
+  animation: center-animation 10s linear infinite;
+}
+
+
+@keyframes center-animation{
+  0% {
+    box-shadow:
+      inset 7px 7px 12px 1px var(--yves),  /* inner white */
+      5px 3px 5px 2px var(--gowon), /* middle magenta */
+      20px 0 80px 40px white; /* outer cyan */
+  }
+  25% {
+    box-shadow:
+      inset -7px 7px 12px 1px var(--yves),  /* inner white */
+      -5px 3px 5px 2px var(--gowon), /* middle magenta */
+      10px 0 100px 40px white; /* outer cyan */
+  }
+  50% {
+    box-shadow:
+      inset -7px -7px 12px 1px var(--yves),  /* inner white */
+      -5px -3px 5px 2px var(--gowon), /* middle magenta */
+      0px 0 120px 40px white; /* outer cyan */
+  }
+  75% {
+    box-shadow:
+      inset 7px -7px 12px 1px var(--yves),  /* inner white */
+      5px -3px 5px 2px var(--gowon), /* middle magenta */
+      10px 0 100px 40px white; /* outer cyan */
+  }
+  100% {
+    box-shadow:
+      inset 7px 7px 12px 1px var(--yves),  /* inner white */
+      5px 3px 5px 2px var(--gowon), /* middle magenta */
+      20px 0 80px 40px white; /* outer cyan */
+  }
+}
+
+
+.moon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--black);
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 50% + 50px;
+  top: 50% + 50px;
+
+  animation: orbit 48s linear infinite forwards;
+
+}
+.moon * {
+  pointer-events: none;
+}
+.moon:hover ~ .center .default{
+  opacity: 0;
+}
+.text {
+  opacity: 0;
+}
+
+@keyframes orbit {
+    from { transform: rotate(0deg) translateX(300px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+}
+
+.center .text{
+  position: absolute;
+}
+
+
+.heejin {
+  box-shadow:
+    inset -5px -3px 5px 1px white,
+    inset -17px -2px 15px 3px var(--heejin),
+    0 0 100px 20px var(--heejin);
+
+  animation-delay: -48s;
+}
+.heejin:hover ~ .center #heejin{
+  opacity: 1;
+}
+.hyunjin {
+  box-shadow:
+    inset -5px -3px 5px 1px white,
+    inset -17px -2px 15px 3px var(--hyunjin),
+    0 0 100px 20px var(--hyunjin);
+
+  animation-delay: -44s;
+}
+.hyunjin:hover ~ .center #hyunjin{
+  opacity: 1;
+}
+.haseul {
+  box-shadow:
+    inset -5px -3px 5px 1px white,
+    inset -17px -2px 15px 3px var(--haseul),
+    0 0 100px 20px var(--haseul);
+
+  animation-delay: -40s;
+}
+.haseul:hover ~ .center #haseul{
+  opacity: 1;
+}
+.yeojin {
+  box-shadow:
+    inset -5px -3px 5px 1px white,
+    inset -17px -2px 15px 3px var(--yeojin),
+    0 0 100px 20px var(--yeojin);
+
+  animation-delay: -36s;
+}
+.yeojin:hover ~ .center #yeojin{
+  opacity: 1;
+}
+.vivi {
+  box-shadow:
+    inset -5px -3px 5px 1px white,
+    inset -17px -2px 15px 3px var(--vivi),
+    0 0 100px 20px var(--vivi);
+
+  animation-delay: -32s;
+}
+.vivi:hover ~ .center #vivi{
+  opacity: 1;
+}
+.kimlip {
+  box-shadow:
+    inset -5px -3px 5px 1px white,
+    inset -17px -2px 15px 3px var(--kimlip),
+    0 0 100px 20px var(--kimlip);
+
+  animation-delay: -28s;
+}
+.kimlip:hover ~ .center #kimlip{
+  opacity: 1;
+}
+.jinsoul {
+  box-shadow:
+    inset -5px -3px 5px 1px white,
+    inset -17px -2px 15px 3px var(--jinsoul),
+    0 0 100px 20px var(--jinsoul);
+
+  animation-delay: -24s;
+}
+.jinsoul:hover ~ .center #jinsoul{
+  opacity: 1;
+}
+.choerry {
+  box-shadow:
+    inset -5px -3px 5px 1px white,
+    inset -17px -2px 15px 3px var(--choerry),
+    0 0 100px 20px var(--choerry);
+
+  animation-delay: -20s;
+}
+.choerry:hover ~ .center #choerry{
+  opacity: 1;
+}
+.yves {
+  box-shadow:
+    inset -5px -3px 5px 1px white,
+    inset -17px -2px 15px 3px var(--yves),
+    0 0 100px 20px var(--yves);
+
+  animation-delay: -16s;
+}
+.yves:hover ~ .center #yves{
+  opacity: 1;
+}
+.chuu {
+  box-shadow:
+    inset -5px -3px 5px 1px white,
+    inset -17px -2px 15px 3px var(--chuu),
+    0 0 100px 20px var(--chuu);
+
+  animation-delay: -12s;
+}
+.chuu:hover ~ .center #chuu{
+  opacity: 1;
+}
+.gowon {
+  box-shadow:
+    inset -5px -3px 5px 1px white,
+    inset -17px -2px 15px 3px var(--gowon),
+    0 0 100px 20px var(--gowon);
+
+  animation-delay: -8s;
+}
+.gowon:hover ~ .center #gowon{
+  opacity: 1;
+}
+.olhye {
+  box-shadow:
+    inset -5px -3px 5px 1px white,
+    inset -17px -2px 15px 3px var(--olhye),
+    0 0 100px 20px var(--olhye);
+
+  animation-delay: -4s;
+}
+.olhye:hover ~ .center #olhye{
+  opacity: 1;
+}

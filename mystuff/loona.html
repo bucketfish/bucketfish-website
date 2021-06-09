@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="loona • bucketfish" />
+    <meta property="og:description" content="playing with random html things and making a website centered around loona." />
+    <meta property="og:url" content="https://bucketfish.neocities.org/mystuff/loona.html" />
+    <meta name="theme-color" content="#add8ff" />
+
+    <title>loona • bucketfish</title>
+    <link rel="stylesheet" type="text/css" href="loona.css">
+    <!--link rel="icon" href="../images/pride bucketfish.png"-->
+  </head>
+  <body>
+    <div class="container">
+
+      <script>
+        moons = document.getElementsByClassName("moon");
+
+        for(i = 0; i < moons.length; i++){
+          moons[i].setAttribute("onmouseenter", "moonpause()")
+          moons[i].setAttribute("onmouseout", "moonstart()")
+
+        }
+
+        function moonpause(){
+          for (i = 0; i < moons.length; i++){
+            moons[i].style.animationPlayState = "paused";
+          }
+        }
+
+        function moonstart(){
+          for (i = 0; i < moons.length; i++){
+            moons[i].style.animationPlayState = "running";
+          }
+        }
+
+      </script>
+
+      <a href="../mystuff.html"> < back to bucketfish</a>
+
+      <div onmouseenter="moonpause()" onmouseout="moonstart()" class="moon heejin">
+        <p>heejin.</p>
+        <div></div>
+      </div>
+
+      <div onmouseenter="moonpause()" onmouseout="moonstart()" class="moon hyunjin">
+        <p>hyunjin.</p>
+        <div></div>
+      </div>
+
+      <div onmouseenter="moonpause()" onmouseout="moonstart()" class="moon haseul">
+        <p>haseul.</p>
+        <div></div>
+      </div>
+
+      <div onmouseenter="moonpause()" onmouseout="moonstart()" class="moon yeojin">
+        <p>yeojin.</p>
+        <div></div>
+      </div>
+
+      <div onmouseenter="moonpause()" onmouseout="moonstart()" class="moon vivi">
+        <p>vivi.</p>
+        <div></div>
+      </div>
+
+      <div onmouseenter="moonpause()" onmouseout="moonstart()" class="moon kimlip">
+        <p>kim lip.</p>
+        <div></div>
+      </div>
+
+      <div onmouseenter="moonpause()" onmouseout="moonstart()" class="moon jinsoul">
+        <p>jinsoul.</p>
+        <div></div>
+      </div>
+
+      <div onmouseenter="moonpause()" onmouseout="moonstart()" class="moon choerry">
+        <p>choerry.</p>
+        <div></div>
+      </div>
+
+      <div onmouseenter="moonpause()" onmouseout="moonstart()" class="moon yves">
+          <p>yves.</p>
+          <div></div>
+      </div>
+
+      <div onmouseenter="moonpause()" onmouseout="moonstart()" class="moon chuu">
+          <p>chuu.</p>
+          <div></div>
+      </div>
+
+      <div onmouseenter="moonpause()" onmouseout="moonstart()" class="moon gowon">
+          <p>gowon.</p>
+          <div></div>
+      </div>
+
+      <div onmouseenter="moonpause()" onmouseout="moonstart()" class="moon olhye">
+          <p>olivia hye.</p>
+          <div></div>
+      </div>
+
+
+      <div class="center">
+        <p class="default">loona.</p>
+
+        <div class="text" id="heejin">
+          <h1 style="color: var(--heejin);">heejin</h1>
+          <p>1st member of loona</p>
+          <p>color: bright pink</p>
+          <p>animal: rabbit</p>
+        </div>
+
+        <div class="text" id="hyunjin">
+          <h1 style="color: var(--hyunjin);">hyunjin</h1>
+          <p>2nd member of loona</p>
+          <p>color: yellow</p>
+          <p>animal: cat</p>
+        </div>
+
+        <div class="text" id="haseul">
+          <h1 style="color: var(--haseul);">haseul</h1>
+          <p>3rd member of loona</p>
+          <p>color: green</p>
+          <p>animal: white bird</p>
+        </div>
+
+        <div class="text" id="yeojin">
+          <h1 style="color: var(--yeojin);">yeojin</h1>
+          <p>4th member of loona</p>
+          <p>color: orange</p>
+          <p>animal: frog</p>
+        </div>
+
+        <div class="text" id="vivi">
+          <h1 style="color: var(--vivi);">vivi</h1>
+          <p>5th member of loona</p>
+          <p>color: light pink</p>
+          <p>animal: deer</p>
+        </div>
+
+        <div class="text" id="kimlip">
+          <h1 style="color: var(--kimlip);">kim lip</h1>
+          <p>6th member of loona</p>
+          <p>color: red</p>
+          <p>animal: owl</p>
+        </div>
+
+        <div class="text" id="jinsoul">
+          <h1 style="color: var(--jinsoul);">jinsoul</h1>
+          <p>7th member of loona</p>
+          <p>color: blue</p>
+          <p>animal: blue betta</p>
+        </div>
+
+        <div class="text" id="choerry">
+          <h1 style="color: var(--choerry);">choerry</h1>
+          <p>8th member of loona</p>
+          <p>color: purple</p>
+          <p>animal: fruit bat</p>
+          <p>fruit: cherry</p>
+        </div>
+
+        <div class="text" id="yves">
+          <h1 style="color: var(--yves);">yves</h1>
+          <p>9th member of loona</p>
+          <p>color: burgundy</p>
+          <p>animal: swan</p>
+          <p>fruit: apple</p>
+        </div>
+
+        <div class="text" id="chuu">
+          <h1 style="color: var(--chuu);">chuu</h1>
+          <p>10th member of loona</p>
+          <p>color: peach</p>
+          <p>animal: penguin</p>
+          <p>fruit: strawberry</p>
+        </div>
+
+        <div class="text" id="gowon">
+          <h1 style="color: var(--gowon);">gowon</h1>
+          <p>11th member of loona</p>
+          <p>color: eden green</p>
+          <p>animal: emperor butterfly</p>
+          <p>fruit: pineapple</p>
+        </div>
+
+        <div class="text" id="olhye">
+          <h1 style="color: var(--olhye);">olivia hye</h1>
+          <p>12th member of loona</p>
+          <p>color: silver</p>
+          <p>animal: wolf</p>
+          <p>fruit: blood plum</p>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+  </body>
+</html>
