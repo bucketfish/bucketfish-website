@@ -18,7 +18,7 @@ phrases = [
   "every month is pride month. happy pride month!",
   "oh dear, you have head strings? that's a problem.",
   "i'm 50% sure the stars will swim about amputated endurance.",
-  '<a href="unlisted/h.html">hhhhhh</a>hhh.',
+  '<a href="unlisted/h">hhhhhh</a>hhh.',
   "my favorite letter is y.",
   "when nothing is right, go left.",
   "wait... this isn't what i typed!",
