@@ -48,7 +48,7 @@ var drawRipple = function(ev) {
   var y = ev.clientY;
   var node = document.querySelector(".ripple");
   var newNode = node.cloneNode(true);
-  newNode.classList.add("animate");
+  newNode.classList.add("ripple-animate");
   newNode.style.left = ev.clientX - 12 + "px";
   newNode.style.top = ev.clientY - 12 + "px";
   node.parentNode.replaceChild(newNode, node);
