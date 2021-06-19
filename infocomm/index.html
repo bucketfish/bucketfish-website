@@ -30,7 +30,6 @@
           transition: all 0.5s ease-in-out;
         }
         .info:target{
-          height: auto;
         }
         #me:target{
           height: 9.5em;
@@ -48,9 +47,19 @@
           height: 9.5em;
         }
         #fun:target{
-          height: 13.5em;
+          height: 12.5em;
+        }
+        #achievements:target{
+          height: 10.5em;
+        }
+        #more{
+          padding: 0;
+          margin: 0;
         }
 
+        #more:target{
+          height: 34em;
+        }
 
       </style>
 
@@ -60,7 +69,7 @@
         <p>i'm <span class="underline" style="text-decoration-color: var(--lightpurple)">jiang tongyu</span> from class 304 of 2021, and i'm running to be your chairperson in exco 2022 :) this is my campaign! i hope you have fun reading it all!</p>
       </div>
 
-      <div class="border normal">
+      <div class="border normal" id="main">
         <h2>click on these :)</h2>
         <ul>
           <li><a onclick="toggle(this, 'me')">me, who i am, easy stuff, etcetc</a></li>
@@ -112,40 +121,58 @@
               <li>langauges too! i think languages are cool. check out toki pona :D</li>
             </ul>
           </div>
-          <li><a onclick="toggle(this, 'fun')">some fun things i made and fun things in general!</a></li>
+          <li><a onclick="toggle(this, 'fun')">some fun things :D</a></li>
           <div class="info" id="fun">
             <ul>
-              <li><a href="https://bucketfish.itch.io" target="_blank">my itch.io page</a>! i made some small games for jams there hehe. fun stuff.</li>
-              <li>actually i. haven't made other fun stuff. rip.</li>
+              <li><a href="https://bucketfish.itch.io" target="_blank">my itch.io page</a>! contains two games i made in 48 hours for game jams. more to come :)</li>
               <li><a href="https://github.com/Droogans/unmaintainable-code" target="_blank">how to write unmaintable code</a>, a really long list of how to write Bad Code. if you code a lot this is super funny :p</li>
               <li><a href="https://www.thiswebsitewillselfdestruct.com/" target="_blank">this website will self-destruct</a>, a fun little website from which i stole the borders of this page. it's a nice website!</li>
               <li><a href="https://www.youtu.be/RqvCNb7fKsg" target="_blank">funny video about haskell</a>, a different kind of programming language :)</li>
-              <li></li>
             </ul>
 
           </div>
+          <li><a onclick="toggle(this, 'achievements')">my achievements, and infocomm-related things i've done :)</a></li>
+          <div class="info" id="achievements">
+            <ul>
+              <li>cat (2019 and 2021) - distinction and high distinction :D</li>
+              <li>noi (2020 and 2021) - bronze and silver!</li>
+              <li>national digital storytelling competition (2019) - 3rd place 🎉</li>
+              <li>singapore games creation competition (2019) - merit !</li>
+              <li>also a published app (<a href="https://apps.apple.com/sg/app/habitat-do-tasks-grow-trees/id1546610193" target="_blank">habitat</a>) on the app store.</li>
+              <li>was a part of 2019 ihg helper, 2021 ihg ot, congress video collab team, inet team, and taught a few c++ courses in infocomm :)</li>
+            </ul>
+
+          </div>
+          <li><a onclick="toggle(this, 'more')">more things! source code, etc</a></li>
         </ul>
       </div>
 
-      <div class="border normal">
-        <h2>source code for the page!</h2>
-        <p>so you can check it out for yourself and pick it apart and idk, find secrets?</p>
-        <!--yoo! you found a secret! yes, this is a secret. good job! i think this was quite obvious tho.-->
-        <p><a href="https://drive.google.com/drive/folders/14zK03lLkISYUPgqa9Dne5daU3U6xBm_F?usp=sharing" target="_blank">here it is!</a></p>
-        <!--oh, what do you mean you want an Actual secret? wow.-->
+      <div class="info" id="more">
+        <div class="border normal">
+          <h2>source code for the page!</h2>
+          <p>so you can check it out for yourself and pick it apart and idk, find secrets?</p>
+          <!--yoo! you found a secret! yes, this is a secret. good job! i think this was quite obvious tho.-->
+          <p>everything in this website, including the animation, text, style, etcetc, was all made purely with handwritten html, css, and javascript. no plugins or fancy tools used :)</p>
+          <p><a href="https://drive.google.com/drive/folders/14zK03lLkISYUPgqa9Dne5daU3U6xBm_F?usp=sharing" target="_blank">here it is!</a></p>
+          <!--oh, what do you mean you want an Actual secret? wow.-->
+          <p>this website is hosted on <a href="https://neocities.org" target="_blank">neocities</a>, a free website-hosting-sharing place! it's nice.</p>
 
+        </div>
+        <!--what can i give you? i didn't plan for someone to actually find this.-->
+        <!--oh well. maybe check out https://bucketfish.neocities.org and find the rest of my website? that's pretty secret of me, don't you think? :)-->
+        <!--also whatsapp/discord me 'axolotl' if you find this! yay!-->
+
+        <div class="border normal">
+          <h2>optional rickroll</h2>
+          <p>i know i promised no rickrolls, but, infocomm culture,</p>
+          <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">here's an optional one</a>!!! have fun :)</p>
+
+        </div>
       </div>
-      <!--what can i give you? i didn't plan for someone to actually find this.-->
-      <!--oh well. maybe check out https://bucketfish.neocities.org and find the rest of my website? that's pretty secret of me, don't you think? :)-->
-      <!--also whatsapp/discord me 'axolotl' if you find this! yay!-->
 
-      <div class="border normal">
-        <h2>optional rickroll</h2>
-        <p>i know i promised no rickrolls, but, infocomm culture,</p>
-        <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">here's an optional one</a>!!! have fun :)</p>
-
+      <div class="border small">
+        <p>thank you! | jiang tongyu 2021</p>
       </div>
-
     </div>
 
 
