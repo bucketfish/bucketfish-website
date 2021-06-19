@@ -93,6 +93,10 @@ a[target="_blank"]::after {
     margin: 0 3px 0 5px;
 }
 
+a[onclick]{
+  text-decoration: none;
+}
+
 video,img{
   display: block;
   margin-left: auto;
