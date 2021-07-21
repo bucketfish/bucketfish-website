@@ -115,6 +115,7 @@ video,img{
 
 embed, iframe{
   display: block;
+  margin: 20px 0;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--black)
