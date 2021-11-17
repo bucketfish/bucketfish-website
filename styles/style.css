@@ -28,18 +28,18 @@
     --gray5: #a9baca;
     --gray6: #bdd2e4;
 
-    --lessred: #ffcaca88;
-    --lessorange: #ffedc188;
-    --lessyellow: #feffb888;
-    --lessgreen: #c4ffcb88;
-    --lessblue: #add8ff88;
-    --lesspurple: #ccafe988;
+    --lessred: #ffcacaaa;
+    --lessorange: #ffedc1aa;
+    --lessyellow: #feffb8aa;
+    --lessgreen: #c4ffcbaa;
+    --lessblue: #add8ffaa;
+    --lesspurple: #ccafe9aa;
 
 
     --rainbow: linear-gradient(to bottom, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
     --rainbowright: linear-gradient(to right, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
     --hrainbow: linear-gradient(to right, #00000000 0%, var(--lessred) 14%, var(--orange) 28%, var(--yellow) 42%, var(--green) 56%, var(--blue) 70%,  var(--lesspurple) 84%, #00000000 100%);
-    --bgrainbow: linear-gradient(-45deg, var(--lessred) 0%, var(--lessorange) 20%, var(--lessyellow) 40%, var(--lessgreen) 60%, var(--lessblue) 80%,  var(--lesspurple) 100%);
+    --bgrainbow: linear-gradient(to right, var(--lessred) 0%, var(--lessorange) 20%, var(--lessyellow) 40%, var(--lessgreen) 60%, var(--lessblue) 80%,  var(--lesspurple) 100%);
 
 }
 
@@ -255,6 +255,23 @@ h2{
 }
 
 
+strong{
+  font-weight: 100;
+  background-color: var(--white);
+  background: var(--bgrainbow);
+  -webkit-background-clip: highlight;
+
+  color: var(--trueblack);
+  padding: 1px 2px;
+  box-sizing: content-box;
+  border-radius: 5px;
+
+}
+
+::selection{
+  color: var(--black);
+  background-color: var(--lightblue);
+}
 
 /*====== HEADER ======*/
 
