@@ -353,3 +353,16 @@ h2{
     opacity: 0;
   }
 }
+
+
+/* ========== EMOJI! ========== */
+
+img.emoji{
+  margin-bottom: -5px;
+  padding: 0;
+  height: 24px;
+}
+
+img.emoji.florshed{
+  content: url(../emoji/florshed.png);
+}
