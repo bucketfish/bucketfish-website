@@ -269,8 +269,15 @@ strong{
 }
 
 ::selection{
-  color: var(--black);
-  background-color: var(--lightblue);
+  color: var(--lightblue);
+  background-color: var(--gray3);
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 60px; /* fixed header height*/
+  margin: -60px 0 0; /* negative fixed header height */
 }
 
 /*====== HEADER ======*/
