@@ -1,5 +1,5 @@
 /* ========== RAINBOW HEADER ========== */
-var parent = document.getElementsByTagName('header')[0].getElementsByTagName('h1')[0];
+var parent = document.getElementsByClassName('header')[0].getElementsByTagName('h1')[0];
 
 var string = parent.innerHTML;
 parent.innerHTML = "";

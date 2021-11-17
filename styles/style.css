@@ -49,6 +49,7 @@
 
 p, a {
   font-family: Merriweather, Georgia, serif;
+  font-weight: 300;
 }
 
 html{
@@ -64,18 +65,35 @@ body {
   padding: 0;
 
   background-color: #111119;
-  overflow-x: hidden;
+
 
   min-height: 100%;
+  height: 100%;
 
   background-image: linear-gradient(to bottom, var(--black) 0%, #111119 60%);
   background-size: auto;
   background-position: center;
 }
 
+.subtitle{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1px;
+  width: 60%;
+  margin: auto;
+  background-image: radial-gradient(ellipse at top, var(--black) 20%, transparent 100%);
+}
+
+.subtitle hr{
+  width: 100%;
+}
+
 .flexbox{
+  padding-top: 1.5%;
+  padding-bottom: 4%;
   display:flex;
   justify-content: space-between;
+
 }
 
 
@@ -92,15 +110,19 @@ body {
 }
 
 .sidebar{
-  width: 25%;
+  position: sticky;
+  top: 5%;
+  width: 24%;
 }
 
 .sidebar div{
-  margin-bottom: 10px;
+  margin-bottom: 13px;
+  padding: 2% 10%;
+  text-align: right;
 }
 
 .nav{
-  padding: 2%;
+
 }
 
 
@@ -153,11 +175,11 @@ h1 {
   font-size: 48px;
 }
 
-header h1{
+.header h1{
   font-weight: bold;
 }
 
-header p{
+.header p{
   font-family: Roboto, sans-serif;
   font-weight: 200;
   font-size: 20px;
@@ -165,13 +187,17 @@ header p{
   margin-top: 10px;
 }
 
-header{
+.header{
   font-variant-ligatures: none;
 
-  padding-top: 1%;
-  padding-bottom: 1.5%;
+  padding-top: 0;
+  padding-bottom: 0;
   text-align: center;
   font-family: Roboto, sans-serif;
+}
+
+.top{
+  padding-top: 1%;
 }
 
 hr {
@@ -184,7 +210,7 @@ hr {
 
 /*====== HEADER ======*/
 
-header span{
+.header span{
   font-size: 2em;
   animation-delay: var(--n);
   animation: wave 1s linear var(--n) infinite forwards running, rainbow 3s linear var(--n) infinite forwards running;
@@ -222,14 +248,14 @@ header span{
 
 
 #rain {
-  overflow: hidden;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   z-index: -1;
+
 }
 
 
