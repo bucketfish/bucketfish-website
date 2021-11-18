@@ -113,7 +113,8 @@ body {
   top: 1px;
   width: 60%;
   margin: auto;
-  background-image: radial-gradient(ellipse at top, var(--black) 20%, transparent 100%);
+  background-image: radial-gradient(farthest-side at 50% 20%, var(--black) 40%, transparent 100%);
+  z-index: 2;
 }
 
 .subtitle hr{
@@ -143,7 +144,7 @@ body {
 
 .sidebar{
   position: sticky;
-  top: 5%;
+  top: 1.5%;
   width: 24%;
 }
 
@@ -191,6 +192,18 @@ body {
   animation: rainbow-border 5s linear 0ms infinite forwards running;
   background-color: var(--black);
   box-sizing: border-box;
+}
+
+embed, iframe {
+    display: block;
+    margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+
+    border: 0;
+    border-radius: 15px;
 }
 
 
