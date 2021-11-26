@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+/* ========== VARIABLES ========== */
+:root {
+    --red: #ffcaca;
+    --orange: #ffedc1;
+    --yellow: #feffb8;
+    --green: #c4ffcb;
+    --lightgreen:#CCD7C5;
+    --darkgreen: #3E885B;
+    --darkblue: #7fb4f5;
+    --blue: #add8ff;
+    --lightblue: #d1e9ff;
+    --mint: #adffe0;
+    --lightpurple:#D8CCF5;
+    --purple: #ccafe9;
+    --white: #fefefa;
+    --lightgray: #94B0C2;
+    --gray: #ADACB5;
+    --darkgray: #333C57;
+    --black: #454545;
+    --trueblack: #242424;
+
+    --gray1: #595c60;
+    --gray2: #6d747a;
+    --gray3: #818b95;
+    --gray4: #95a3af;
+    --gray5: #a9baca;
+    --gray6: #bdd2e4;
+
+    --lessred: #ffcacaaa;
+    --lessorange: #ffedc1aa;
+    --lessyellow: #feffb8aa;
+    --lessgreen: #c4ffcbaa;
+    --lessblue: #add8ffaa;
+    --lesspurple: #ccafe9aa;
+
+
+    --rainbow: linear-gradient(to bottom, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+    --rainbowright: linear-gradient(to right, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+    --hrainbow: linear-gradient(to right, #00000000 0%, var(--lessred) 14%, var(--orange) 28%, var(--yellow) 42%, var(--green) 56%, var(--blue) 70%,  var(--lesspurple) 84%, #00000000 100%);
+    --bgrainbow: linear-gradient(to right, var(--lessred) 0%, var(--lessorange) 20%, var(--lessyellow) 40%, var(--lessgreen) 60%, var(--lessblue) 80%,  var(--lesspurple) 100%);
+
+    --default: url(../images/cursor/default.png);
+    --pointer: url(../images/cursor/pointer.png);
+}
+
+* {
+  overflow-wrap:break-word;
+  cursor: var(--default), auto;
+
+}
+
+p, a {
+  font-family: Merriweather, Georgia, serif;
+}
+
+
+a {
+  cursor: var(--pointer), auto;
+  display: inline-block;
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+  transition: linear 0.2s;
+  color: var(--purple);
+}
+
+a:before {
+  background: var(--rainbowright);
+  content: '';
+  height: 2px;
+  position: absolute;
+  bottom: -1.5px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.2s ease-in-out;
+}
+
+a:hover{
+  color: var(--white);
+}
+
+a:hover:before{
+  width: 0;
+}
+
+
+
+html{
+  min-height: 100%;
+}
+
+body {
+  color: var(--lightblue);
+  font-family: Merriweather, Georgia, serif;
+  font-weight: normal;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: #111119;
+
+
+  min-height: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(to bottom, var(--black) 0%, #242430 30%, #111119 60%);
+  background-size: auto;
+  background-position: center;
+}
+
+.subtitle{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1px;
+  width: 60%;
+  margin: auto;
+  background-image: radial-gradient(farthest-side at 50% 20%, var(--black) 40%, transparent 100%);
+  z-index: 2;
+}
+
+.subtitle hr{
+  width: 100%;
+}
+
+.flexbox{
+  padding-top: 1.5%;
+  padding-bottom: 4%;
+  display:flex;
+  justify-content: space-between;
+}
+
+.in-flexbox {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0;
+}
+
+.container{
+  padding: 1% 2%;
+  width: 74%;
+  height: 100%;
+}
+
+.sidebar{
+  position: sticky;
+  top: 1.5%;
+  width: 24%;
+}
+
+.sidebar div{
+  margin-bottom: 13px;
+  padding: 2% 10%;
+}
+
+.nav a, .subpage a{
+  color: var(--lightblue);
+}
+
+.nav a:hover, .subpage a:hover{
+  color: var(--white);
+  transition: linear 0.2s;
+}
+
+.nav p, .subpage p{
+  line-height: 1em;
+}
+
+
+@media (max-width:1024px)
+{
+  .flexbox{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  .sidebar {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 74%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    gap: 2%;
+  }
+
+  .sidebar div{
+    margin-bottom: 13px;
+    padding: 1% 2%;
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 720px)
+{
+  .container{
+    width: 90%;
+  }
+  .sidebar{
+    width: 90%;
+  }
+
+  .nav h2{
+    font-size: 1.4em;
+  }
+  .nav p{
+    font-size: 11px;
+  }
+
+  a:before {
+    height: 2px;
+    bottom: -2px;
+  }
+
+}
+
+.body {
+  width: 60%;
+  height: 95%;
+
+  margin: auto;
+  margin-top: 2.5%;
+
+  padding: 0;
+
+}
+
+@media (max-width:1024px)
+{
+  .body {
+    width: 100%;
+    padding: 0;
+    margin: auto;
+  }
+}
+
+
+.outline{
+  border: 2px solid;
+  border-radius: 15px;
+  animation: rainbow-border 5s linear 0ms infinite forwards running;
+  background-color: var(--black);
+  box-sizing: border-box;
+}
+
+embed, iframe {
+    display: block;
+    margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+
+    border: 0;
+    border-radius: 15px;
+}
+
+
+@keyframes rainbow-border{
+  0% {border-color: var(--lessred);}
+  17% {border-color: var(--lessorange);}
+  33% {border-color: var(--lessyellow);}
+  50% {border-color: var(--lessgreen);}
+  67% {border-color: var(--lessblue);}
+  83% {border-color: var(--lesspurple);}
+  100% {border-color: var(--lessred);}
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: Roboto, sans-serif;
+
+}
+
+h1 {
+  line-height: 1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 48px;
+}
+
+.header h1{
+  font-weight: bold;
+}
+
+.header p{
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.header{
+  font-variant-ligatures: none;
+
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+}
+
+.top{
+  padding-top: 15px;
+}
+
+hr {
+  background-image: var(--hrainbow);
+  width: 70%;
+  border: 0;
+  height: 1px;
+}
+
+h2{
+  font-weight: 100;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 14px;
+  padding-top: 0;
+}
+
+
+strong{
+  font-weight: 100;
+  background-color: var(--white);
+  background: var(--bgrainbow);
+  -webkit-background-clip: highlight;
+
+  color: var(--trueblack);
+  padding: 1px 2px;
+  box-sizing: content-box;
+  border-radius: 5px;
+
+}
+
+::selection{
+  color: var(--lightblue);
+  background-color: var(--gray3);
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 60px; /* fixed header height*/
+  margin: -60px 0 0; /* negative fixed header height */
+}
+
+/*====== HEADER ======*/
+
+.header span{
+  font-size: 2em;
+  animation-delay: var(--n);
+  animation: wave 1s linear var(--n) infinite forwards running, rainbow 3s linear var(--n) infinite forwards running;
+  position: relative;
+}
+
+@media screen and (prefers-reduced-motion: reduce;)
+{
+  .header span {
+    animation: none;
+  }
+}
+
+@keyframes wave{
+  0%    {top: 0px;}
+  25%   {top: -3px;}
+  50%   {top: 0px;}
+  75%  {top: 3px;}
+  100% {top: 0px;}
+}
+
+@keyframes rainbow{
+  0% {color: var(--red);}
+  17% {color: var(--orange);}
+  33% {color: var(--yellow);}
+  50% {color: var(--green);}
+  67% {color: var(--blue);}
+  83% {color: var(--purple);}
+  100% {color: var(--red);}
+}
+
+
+
+
+
+
+#rain {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  z-index: -1;
+
+}
+
+
+
+.drop {
+  position: absolute;
+  bottom: 100%;
+  width: 15px;
+  height: 120px;
+  pointer-events: none;
+  animation: drop 1.5s linear infinite;
+  z-index: -1;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0vh);
+  }
+  75% {
+    transform: translateY(90vh);
+  }
+  100% {
+    transform: translateY(150vh);
+  }
+}
+
+.stem {
+  width: 2px;
+  height: 60%; /*size of raindrop*/
+  margin-left: 7px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--lightgray));
+  animation: stem 1.5s linear infinite;
+  z-index: -1;
+}
+
+@keyframes stem {
+  0% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* ========== EMOJI! ========== */
+
+img.emoji{
+  margin-bottom: -5px;
+  padding: 0;
+  height: 24px;
+}
+
+img.emoji.florshed{
+  content: url(../emoji/florshed.png);
+}

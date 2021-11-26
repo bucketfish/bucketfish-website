@@ -1,60 +1,44 @@
 /* ========== RAINBOW HEADER ========== */
-var parent = document.getElementsByTagName('header')[0].getElementsByTagName('h1')[0];
+var parent = document.getElementsByClassName('header')[0].getElementsByTagName('h1')[0];
 
-var string = parent.innerHTML;
+var string = "bucket";
+var string2 = "fish";
 parent.innerHTML = "";
 string.split("");
 var i = 0, length = string.length;
 for (i; i < length; i++) {
-    parent.innerHTML += "<span style='--n:"+ (100 * i + 'ms') + ";'>" + string[i] + "</span>";
+    parent.innerHTML += "<span style='--n:"+ (100 * i - 1000 + 'ms') + ";'>" + string[i] + "</span>";
+}
+parent.innerHTML += "<wbr>";
+
+length = string2.length;
+for (i = 5; i < length+5; i++) {
+    parent.innerHTML += "<span style='--n:"+ (100 * i - 1000 + 'ms') + ";'>" + string2[i-5] + "</span>";
 }
 
-/* ========== RAINDOMISED MESSAGE ========== */
-phrases = [
-  "may i have your kneecaps?",
-  "have a nice cup of tea and enjoy your time exploring my world :)",
-  "every second in my mind, a minute passes.",
-  "god-tier shitposting at your service!",
-  "every month is pride month. happy pride month!",
-  "oh dear, you have head strings? that's a problem.",
-  "i'm 50% sure the stars will swim about amputated endurance.",
-  '<a href="unlisted/h">hhhhhh</a>hhh.',
-  "my favorite letter is y.",
-  "when nothing is right, go left.",
-  "wait... this isn't what i typed!",
-  "yes, this is a random message. i stole all of hypixel's 'ez' messages here, too.",
-  "i like pineapple on my pizza.",
-  "let's be friends instead of fighting okay?",
-  "doing a bamboozle fren.",
-  "zjierb. zjierbness.",
-  "mi jan misali ala li pana sona ala pi toki pona tawa sina.",
-  "happy bee day, may 20!",
-  "i think webrings are cool!",
-  "baby shark dududududu.",
-  "sometimes i wonder if anyone ever reads any of these :)",
-  "catch-22 :O",
-]
-try{
-  var random = document.getElementById("random");
-  random.innerHTML = phrases[Math.floor(Math.random() * phrases.length)];
+
+/* ========== RAIN BACKGROUND ========== */
+var rain = document.getElementById('rain');
+
+var makeItRain = function() {
+  //clear out everything
+  rain.innerHTML = "";
+
+  var increment = 0;
+  var drops = "";
+
+  while (increment < 95) {
+    var randoHundo = (Math.floor(Math.random() * (98) + 1));
+
+    var randoFiver = (Math.floor(Math.random() * (10) + 2));
+    //increment
+    increment += randoFiver;
+
+    //add in a new raindrop with various randomizations to certain CSS properties
+    drops += '<div class="drop" style="left: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
+  }
+
+  rain.innerHTML = drops;
 }
-catch{}
 
-
-/* ========== RIPPLE CURSOR ========== */
-var ripple = document.createElement("div");
-ripple.classList.add("ripple");
-document.getElementsByTagName("body")[0].appendChild(ripple);
-
-var drawRipple = function(ev) {
-  var x = ev.clientX;
-  var y = ev.clientY;
-  var node = document.querySelector(".ripple");
-  var newNode = node.cloneNode(true);
-  newNode.classList.add("ripple-animate");
-  newNode.style.left = ev.clientX - 12 + "px";
-  newNode.style.top = ev.clientY - 12 + "px";
-  node.parentNode.replaceChild(newNode, node);
-};
-
-window.addEventListener("click", drawRipple);
+makeItRain();
