@@ -1,20 +1,27 @@
 /* ========== RAINBOW HEADER ========== */
-var parent = document.getElementsByClassName('header')[0].getElementsByTagName('h1')[0];
 
-var string = "bucket";
-var string2 = "fish";
-parent.innerHTML = "";
-string.split("");
-var i = 0, length = string.length;
-for (i; i < length; i++) {
-    parent.innerHTML += "<span style='--n:"+ (100 * i - 1000 + 'ms') + ";'>" + string[i] + "</span>";
-}
-parent.innerHTML += "<wbr>";
+function funheader(){
+  var parent = document.getElementsByClassName('header')[0].getElementsByTagName('h1')[0];
 
-length = string2.length;
-for (i = 5; i < length+5; i++) {
-    parent.innerHTML += "<span style='--n:"+ (100 * i - 1000 + 'ms') + ";'>" + string2[i-5] + "</span>";
+  var string = "bucket";
+  var string2 = "fish";
+  parent.innerHTML = "";
+  string.split("");
+  var i = 0, length = string.length;
+  for (i; i < length; i++) {
+      parent.innerHTML += "<span style='--n:"+ (100 * i - 1000 + 'ms') + ";'>" + string[i] + "</span>";
+  }
+  parent.innerHTML += "<wbr>";
+
+  length = string2.length;
+  for (i = 5; i < length+5; i++) {
+      parent.innerHTML += "<span style='--n:"+ (100 * i - 1000 + 'ms') + ";'>" + string2[i-5] + "</span>";
+  }
 }
+
+//window.addEventListener('load', (event) => {
+  funheader();
+//});
 
 
 /* ========== RAIN BACKGROUND ========== */
