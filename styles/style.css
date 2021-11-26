@@ -41,19 +41,23 @@
     --hrainbow: linear-gradient(to right, #00000000 0%, var(--lessred) 14%, var(--orange) 28%, var(--yellow) 42%, var(--green) 56%, var(--blue) 70%,  var(--lesspurple) 84%, #00000000 100%);
     --bgrainbow: linear-gradient(to right, var(--lessred) 0%, var(--lessorange) 20%, var(--lessyellow) 40%, var(--lessgreen) 60%, var(--lessblue) 80%,  var(--lesspurple) 100%);
 
+    --default: url(../images/cursor/default.png);
+    --pointer: url(../images/cursor/pointer.png);
 }
 
 * {
   overflow-wrap:break-word;
+  cursor: var(--default), auto;
+
 }
 
 p, a {
   font-family: Merriweather, Georgia, serif;
-
 }
 
 
 a {
+  cursor: var(--pointer), auto;
   display: inline-block;
   color: inherit;
   position: relative;
@@ -198,6 +202,19 @@ body {
   .sidebar{
     width: 90%;
   }
+
+  .nav h2{
+    font-size: 1.4em;
+  }
+  .nav p{
+    font-size: 11px;
+  }
+
+  a:before {
+    height: 2px;
+    bottom: -2px;
+  }
+
 }
 
 .body {
