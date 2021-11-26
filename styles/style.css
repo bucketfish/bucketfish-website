@@ -126,9 +126,7 @@ body {
   padding-bottom: 4%;
   display:flex;
   justify-content: space-between;
-
 }
-
 
 .in-flexbox {
   box-sizing: border-box;
@@ -166,6 +164,42 @@ body {
   line-height: 1em;
 }
 
+
+@media (max-width:1024px)
+{
+  .flexbox{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  .sidebar {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 74%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    gap: 2%;
+  }
+
+  .sidebar div{
+    margin-bottom: 13px;
+    padding: 1% 2%;
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 720px)
+{
+  .container{
+    width: 90%;
+  }
+  .sidebar{
+    width: 90%;
+  }
+}
+
 .body {
   width: 60%;
   height: 95%;
@@ -177,11 +211,12 @@ body {
 
 }
 
-@media (max-width:720px)
+@media (max-width:1024px)
 {
   .body {
-    width: 80%;
+    width: 100%;
     padding: 0;
+    margin: auto;
   }
 }
 
@@ -251,7 +286,7 @@ h1 {
 }
 
 .top{
-  padding-top: 1%;
+  padding-top: 15px;
 }
 
 hr {
