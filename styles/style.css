@@ -452,11 +452,9 @@ strong{
 img.emoji{
   margin-bottom: -5px;
   padding: 0;
-  width: 1.375em;
-  height: 1.375em;
+  object-fit: contain;
 }
 
 img.emoji.florshed{
   content: url(../emoji/florshed.png);
-  object-fit: contain;
 }
