@@ -457,4 +457,7 @@ img.emoji{
 
 img.emoji.florshed{
   content: url(../emoji/florshed.png);
+  object-fit: contain;
+  width: 1.375em;
+  height: 1.375em;
 }
