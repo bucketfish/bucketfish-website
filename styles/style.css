@@ -253,6 +253,7 @@ embed, iframe {
     margin-right: auto;
     width: 90%;
     height: auto;
+    padding: 0;
 
     border: 0;
     border-radius: 15px;
