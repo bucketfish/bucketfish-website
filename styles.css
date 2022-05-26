@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+/* ========== VARIABLES ========== */
+:root {
+    --red: #ffcaca;
+    --orange: #ffedc1;
+    --yellow: #feffb8;
+    --green: #c4ffcb;
+    --blue: #add8ff;
+    --purple: #ccafe9;
+    --pink: #EBADCB;
+
+    --lightblue: #d1e9ff;
+
+    --white: #ffffff;
+    --lightgray: #9EADBD;
+    --darkgray: #6D839C;
+    --black: #011627;
+
+
+    --lessred: #ffcacaaa;
+    --lessorange: #ffedc1aa;
+    --lessyellow: #feffb8aa;
+    --lessgreen: #c4ffcbaa;
+    --lessblue: #add8ffaa;
+    --lesspurple: #ccafe9aa;
+
+    --bluehint: #add8ff55;
+    --pinkhint: #efbdd555;
+
+    --gradient: linear-gradient(45deg, var(--blue), var(--pink));
+
+    --rainbow: linear-gradient(to bottom, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+    --rainbowright: linear-gradient(to right, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+    --rainbowdiag: linear-gradient(125deg, var(--red) 0%, var(--orange) 20%, var(--yellow) 40%, var(--green) 60%, var(--blue) 80%,  var(--purple) 100%);
+
+    --hrainbow: linear-gradient(to right, #00000000 0%, var(--lessred) 10%, var(--orange) 20%, var(--yellow) 30%, var(--green)70%, var(--blue) 80%,  var(--lesspurple) 90%, #00000000 100%);
+    --bgrainbow: linear-gradient(to right, var(--lessred) 0%, var(--lessorange) 20%, var(--lessyellow) 40%, var(--lessgreen) 60%, var(--lessblue) 80%,  var(--lesspurple) 100%);
+}
+
+
+
+
+* {
+  overflow-wrap:break-word;
+  /* cursor: var(--default), auto; */
+}
+
+html{
+  min-height: 100%;
+}
+
+body {
+  color: var(--black);
+  font-family: Merriweather, Georgia, serif;
+  font-weight: normal;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--blue);
+
+
+  min-height: 100%;
+  height: 100%;
+
+  /* background-image: linear-gradient(to bottom, var(--black) 0%, #242430 30%, #111119 60%);
+  background-size: auto;
+  background-position: center; */
+}
+
+
+p, a {
+  font-family: Merriweather, Georgia, serif;
+}
+
+
+a {
+  /* cursor: var(--pointer), auto; */
+  display: inline-block;
+  color: inherit;
+  position: relative;
+  /* text-decoration: none; */
+  /* transition: linear 0.2s; */
+  /* color: var(--purple); */
+}
+
+/* a:before {
+  background: var(--rainbowright);
+  content: '';
+  height: 2px;
+  position: absolute;
+  bottom: -1.5px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.2s ease-in-out;
+} */
+/*
+a:hover{
+  color: var(--white);
+} */
+/*
+a:hover:before{
+  width: 0;
+} */
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, sans-serif;
+}
+
+hr {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium dotted transparent;
+
+    border-image: var(--hrainbow);
+    border-image-slice: 1;
+    text-align: center;
+    position: relative;
+}
+
+hr:after {
+    content: "‧̍̊˙· 𓆝.° ｡˚𓆛˚｡ °.𓆞 ·˙‧̍̊";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.5em;
+    background: var(--lightblue);
+
+
+    color: var(--darkgray);
+    font-weight: 100;
+
+}
+
+
+
+
+
+.container {
+  width: 50%;
+  margin: 10px auto;
+
+}
+
+.box {
+  padding: 10px 20px;
+  border: 5px solid transparent;
+  border-radius: 50px;
+  background-image: linear-gradient(var(--lightblue), var(--lightblue)),
+                    var(--rainbowdiag);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  -webkit-box-shadow: 5px 7px 15px -1px var(--lightgray);
+  box-shadow: 5px 7px 15px -1px var(--lightgray);
+}
+
+
+
+
+
+
+
+
+
+.main-heading {
+  text-shadow: 3px 3px var(--lightgray);
+  font-size: 6em;
+  text-align: center;
+  margin: 0;
+
+}
+
+.main-heading span{
+  font-variant-ligatures: none;
+
+  animation-delay: var(--n);
+  animation: wave 1s linear var(--n) infinite forwards running, rainbow 3s linear var(--n) infinite forwards running;
+  position: relative;
+}
+
+
+@keyframes wave{
+  0%    {top: 0px;}
+  25%   {top: -3px;}
+  50%   {top: 0px;}
+  75%  {top: 3px;}
+  100% {top: 0px;}
+}
+
+@keyframes rainbow{
+  0% {color: var(--red);}
+  17% {color: var(--orange);}
+  33% {color: var(--yellow);}
+  50% {color: var(--green);}
+  67% {color: var(--blue);}
+  83% {color: var(--purple);}
+  100% {color: var(--red);}
+}
+
+.subtitle {
+  /* font-family: Roboto, sans-serif; */
+  /* font-weight: 800; */
+  font-style: italic;
+  font-size: 24px;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 5px;
+  color: var(--darkgray);
+}
