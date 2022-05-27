@@ -25,6 +25,8 @@
     --lessblue: #add8ffaa;
     --lesspurple: #ccafe9aa;
 
+    --lesswhite: #ffffffdd;
+
     --bluehint: #add8ff55;
     --pinkhint: #efbdd555;
 
@@ -102,6 +104,11 @@ a {
   -webkit-background-clip: highlight;
 }
 
+.content-box a[target="_blank"]::after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0 3px 0 5px;
+}
+
 
 h1, h3, h4, h5, h6 {
   font-family: Roboto, sans-serif;
@@ -142,7 +149,7 @@ hr::after {
   background: var(--lightblue);
 
 
-  color: var(--darkgray);
+  color: var(--lightgray);
   font-weight: 100;
 
 }
@@ -173,6 +180,19 @@ hr::after {
   box-shadow: 5px 7px 15px -1px var(--lightgray);
 }
 
+.border {
+
+  border: 3px solid transparent;
+  border-radius: 50px;
+  background-image: linear-gradient(var(--lightblue), var(--lightblue)),
+                    var(--rainbowdiag);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+
+
+}
+
 
 
 .navbar {
@@ -194,6 +214,13 @@ hr::after {
 
 }
 
+.navbar-item.current p{
+  font-weight: bold;
+  color: var(--black);
+  text-shadow: 3px 3px var(--blue);
+
+}
+
 .navbar-item:hover p{
   color: var(--lightgray);
 
@@ -206,8 +233,6 @@ hr::after {
   font-size: 30px;
   color: var(--darkgray);
   text-shadow: 3px 3px var(--pink);
-
-  vertical-align: center;
 
 }
 
@@ -231,12 +256,25 @@ hr::after {
 
 }
 
+.main-heading.heading-small {
+  text-shadow: 3px 3px var(--lightgray);
+  font-size: 2em;
+  text-align: center;
+  margin: 0;
+
+}
+
 .main-heading span{
   font-variant-ligatures: none;
 
   animation-delay: var(--n);
   animation: wave 1s linear var(--n) infinite forwards running, rainbow 3s linear var(--n) infinite forwards running;
   position: relative;
+}
+
+.main-heading.heading-small span{
+  animation: wave-small 1s linear var(--n) infinite forwards running, rainbow 3s linear var(--n) infinite forwards running;
+
 }
 
 
@@ -248,6 +286,15 @@ hr::after {
   100% {top: 0px;}
 }
 
+
+@keyframes wave-small{
+  0%    {top: 0px;}
+  25%   {top: -1px;}
+  50%   {top: 0px;}
+  75%  {top: 1px;}
+  100% {top: 0px;}
+}
+
 @keyframes rainbow{
   0% {color: var(--red);}
   17% {color: var(--orange);}
@@ -256,4 +303,104 @@ hr::after {
   67% {color: var(--blue);}
   83% {color: var(--purple);}
   100% {color: var(--red);}
+}
+
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.projects a, .project-time {
+  width: 25%;
+  height: 80px;
+
+  box-sizing: border-box;
+  border-bottom: var(--white) 3px solid;
+
+}
+
+.project, .project-time{
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+
+}
+
+.project {
+  padding: 10px 8px 2px 8px;
+
+}
+
+.project.ongoing:hover {
+  background-color: var(--pink);
+}
+
+.project.finished:hover {
+  background-color: var(--blue);
+}
+
+
+.project.forever:hover {
+  background-color: var(--purple);
+}
+
+.project.idle:hover {
+  background-color: var(--lightgray);
+}
+
+
+
+
+.project p, .project-time p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.project p.type, .project p.tag{
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--lightblue);
+  display: inline;
+  vertical-align: middle;
+}
+
+.project p.type {
+  text-shadow: none;
+
+}
+
+.project p.tag{
+  display: inline;
+  font-size: 13px;
+  font-weight: normal;
+  margin-top: 0;
+  font-style: italic;
+}
+
+
+.project:hover p.type, .project:hover p.tag {
+  color: var(--white);
+}
+
+.project:hover p.type {
+  text-shadow: 1px 1px var(--darkgray)
+}
+
+.project-time div{
+  /* background-color: var(--white); */
+  border: 6px var(--white) solid;
+  border-bottom: 3px var(--white) solid;
+  box-sizing: border-box;
+  padding: 20px 5px 0 5px;
+
+}
+
+.project-time p {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+  text-align: right;
+
 }
