@@ -423,10 +423,19 @@ svg:hover path {
 
 .project-time div{
   /* background-color: var(--white); */
-  border: 6px var(--white) solid;
-  border-bottom: 3px var(--white) solid;
+  border: 6px transparent solid;
+  border-bottom: 0px transparent solid;
   box-sizing: border-box;
   padding: 20px 5px 0 5px;
+
+
+  /* border-radius: 25px 25px 0 0; */
+  background-image: linear-gradient(var(--white), var(--white)),
+                    var(--rainbowdiag);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+
 
 }
 
@@ -436,4 +445,12 @@ svg:hover path {
   font-family: Roboto, sans-serif;
   text-align: right;
 
+}
+
+
+.projects a.last-child {
+  border: none;
+  border-bottom: 3px dotted transparent;
+  border-image: linear-gradient(to right, var(--white) 50%, transparent 100%);
+  border-image-slice: 1;
 }
