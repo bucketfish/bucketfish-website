@@ -38,6 +38,9 @@
 
     --hrainbow: linear-gradient(to right, #00000000 0%, var(--lessred) 10%, var(--orange) 20%, var(--yellow) 30%, var(--green)70%, var(--blue) 80%,  var(--lesspurple) 90%, #00000000 100%);
     --bgrainbow: linear-gradient(to right, var(--lessred) 0%, var(--lessorange) 20%, var(--lessyellow) 40%, var(--lessgreen) 60%, var(--lessblue) 80%,  var(--lesspurple) 100%);
+
+    --default: url(images/cursor/default.png);
+    --pointer: url(images/cursor/pointer.png);
 }
 
 
@@ -45,7 +48,7 @@
 
 * {
   overflow-wrap:break-word;
-  /* cursor: var(--default), auto; */
+  cursor: var(--default), auto;
 }
 
 html{
@@ -160,6 +163,13 @@ svg path {
 svg:hover path {
   fill: var(--lightgray);
 }
+
+::selection{
+  color: var(--darkgray);
+  background-color: var(--blue);
+}
+
+
 
 
 .container {
@@ -346,7 +356,7 @@ svg:hover path {
 }
 
 .projects a, .project-time {
-  width: 25%;
+  width: 165px;
   height: 80px;
 
   box-sizing: border-box;
