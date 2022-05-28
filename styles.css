@@ -357,7 +357,7 @@ svg:hover path {
 }
 
 .projects a, .project-time {
-  width: 24%;
+  width: 25%;
   height: 80px;
 
   box-sizing: border-box;
@@ -368,7 +368,7 @@ svg:hover path {
 @media (max-width: 720px)
 {
   .projects a, .project-time {
-    width: 32%;
+    width: 33.3%;
   }
 
 }
@@ -376,7 +376,7 @@ svg:hover path {
 @media (max-width: 475px)
 {
   .projects a, .project-time {
-    width: 49%;
+    width: 50%;
   }
 
 }
