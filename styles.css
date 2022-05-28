@@ -173,8 +173,9 @@ svg:hover path {
 
 
 .container {
-  width: 50%;
+  max-width: 712px;
   margin: 10px auto;
+  padding: 0 10px;
 
 }
 
@@ -356,11 +357,27 @@ svg:hover path {
 }
 
 .projects a, .project-time {
-  width: 165px;
+  width: 24%;
   height: 80px;
 
   box-sizing: border-box;
   border-bottom: var(--white) 3px solid;
+
+}
+
+@media (max-width: 720px)
+{
+  .projects a, .project-time {
+    width: 32%;
+  }
+
+}
+
+@media (max-width: 475px)
+{
+  .projects a, .project-time {
+    width: 49%;
+  }
 
 }
 
@@ -392,9 +409,6 @@ svg:hover path {
 .project.idle:hover {
   background-color: var(--lightgray);
 }
-
-
-
 
 .project p, .project-time p {
   margin: 0;
@@ -463,4 +477,34 @@ svg:hover path {
   border-bottom: 3px dotted transparent;
   border-image: linear-gradient(to right, var(--white) 50%, transparent 100%);
   border-image-slice: 1;
+}
+
+
+
+@media (hover: none) {
+  .project.ongoing {
+    background-color: var(--pink);
+  }
+
+  .project.finished {
+    background-color: var(--blue);
+  }
+
+
+  .project.forever {
+    background-color: var(--purple);
+  }
+
+  .project.idle {
+    background-color: var(--lightgray);
+  }
+
+
+  .project p.type, .project p.tag {
+    color: var(--white);
+  }
+
+  .project p.type {
+    text-shadow: 1px 1px var(--darkgray)
+  }
 }
