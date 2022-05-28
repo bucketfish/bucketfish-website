@@ -154,8 +154,12 @@ hr::after {
 
 }
 
-
-
+svg path {
+  fill: var(--darkgray);
+}
+svg:hover path {
+  fill: var(--lightgray);
+}
 
 
 .container {
@@ -304,6 +308,35 @@ hr::after {
   83% {color: var(--purple);}
   100% {color: var(--red);}
 }
+
+
+
+.social-bar {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0 10px;
+}
+
+.social-bar a {
+  text-decoration: none;
+  text-decoration-color: none;
+
+  color: var(--darkgray);
+}
+
+.social-bar a:hover{
+  text-decoration: none;
+
+  color: var(--darkgray);
+
+  background: none;
+}
+
+.social-bar a[target='_blank']::after {
+  content:" ";
+  margin: 0;
+}
+
 
 
 .projects {
