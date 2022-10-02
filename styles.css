@@ -353,7 +353,7 @@ svg:hover path {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .projects a, .project-time {
