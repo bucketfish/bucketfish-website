@@ -324,23 +324,10 @@ svg:hover path {
 
 .social-bar {
   display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-  align-items: center;
-
-}
-
-.social-bar p:nth-of-type(1) {
-  display: block;
-
-  width: 33%;
-}
-
-.social-bar-inner {
-  display: flex;
   justify-content: space-evenly;
+  padding: 20px;
   align-items: center;
-  flex-grow: 10;
+
 }
 
 .social-bar a {
