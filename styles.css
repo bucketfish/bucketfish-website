@@ -208,6 +208,11 @@ svg:hover path {
 
 }
 
+.maybe {
+  display: none;
+}
+
+
 
 
 .navbar {
@@ -320,6 +325,48 @@ svg:hover path {
   100% {color: var(--red);}
 }
 
+.fp-proj-hor {
+  display: flex;
+}
+
+.fp-proj-hor div {
+  width: 50%;
+}
+
+.fp-proj-hor a {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+
+  width: 90%;
+  text-decoration: none;
+  text-decoration-color: none;
+}
+
+
+.fp-proj-hor a[target='_blank']::after {
+  content:" ";
+  margin: 0;
+}
+
+.fp-proj-hor a:hover{
+  background: none;
+}
+
+.fp-proj-hor a:hover img{
+  border-color: var(--lightgray);
+}
+
+.fp-proj-hor p {
+  text-align: center;
+}
+
+.fp-proj {
+  aspect-ratio: 16/9;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
 
 
 .social-bar {
@@ -373,6 +420,18 @@ svg:hover path {
     width: 33.3%;
   }
 
+  .fp-proj-hor {
+    flex-flow: column
+  }
+
+  .fp-proj-hor div {
+    width: 100%;
+  }
+
+  .maybe {
+    display: block;
+  }
+
 }
 
 @media (max-width: 475px)
@@ -380,6 +439,9 @@ svg:hover path {
   .projects a, .project-time {
     width: 50%;
   }
+
+
+
 
 }
 
