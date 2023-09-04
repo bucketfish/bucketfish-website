@@ -147,7 +147,7 @@ hr::after {
   display: inline-block;
   position: relative;
   top: -0.7em;
-  font-size: 1.5em;
+  font-size: min(1.5em, 5vw);
   padding: 0 0.5em;
   background: var(--lightblue);
 
@@ -437,15 +437,40 @@ svg:hover path {
 
 }
 
+@media (max-width: 525px) {
+  .navbar {
+    display: grid;
+    grid-template-rows: 64px 64px; /* 2 rows of 50px */
+    grid-auto-flow: column;  /* a column flow */
+    grid-gap: 5px;
+  }
+}
+
 @media (max-width: 475px)
 {
   .projects a, .project-time {
     width: 50%;
   }
 
+}
 
 
+@media (max-width: 475px)
+{
+  .projects a, .project-time {
+    width: 50%;
+  }
 
+}
+
+@media (max-width: 330px) {
+  .projects a, .project-time {
+    width: 100%;
+  }
+
+  .navbar {
+    grid-template-rows: 64px 64px 64px; /* 2 rows of 50px */
+  }
 }
 
 .project, .project-time{
