@@ -525,6 +525,7 @@ button[type="submit"]:disabled {
     display: block;
   }
 
+
 }
 
 @media (max-width: 525px) {
@@ -534,6 +535,12 @@ button[type="submit"]:disabled {
     grid-auto-flow: column;  /* a column flow */
     grid-gap: 5px;
   }
+
+  form {
+    padding: 0;
+  }
+
+
 }
 
 @media (max-width: 475px)
