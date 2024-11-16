@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>merry christmas!!!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="desktop">
+      <h1>this game is desktop only.</h1>
+      <p>please play this on desktop. or at least a horizontal screen. otherwise it will all go to shit. i beg of you.</p>
+
+      <button id="try" onclick="document.getElementById('desktop').style.display = 'none'">play at your own risk</button>
+
+    </div>
+
+    <div style="position: absolute; width: 5px; height: 5px; color: red; top: 500px; left: 100px;">
+    </div>
+
+    <div class="intro">
+      <h1>christmas artistry!</h1>
+      <div class="pg-0 hide">
+        <p>this was made for <strong>the whatevers</strong> by <strong>bucketfish</strong> for the bucket secret santa 2022.</p>
+        <p>are you <em>ready?</em></p>
+        <p><small>ps: your progress will disappear if you reload the page, so... don't do that :)</small></p>
+      </div>
+      <div class="pg-1 hide">
+        <p><strong>you look adorable!</strong></p>
+        <p>now, some of the scrunklies in the town kind of need a little bit of <em>help...</em></p>
+      </div>
+      <div class="pg-2 hide">
+        <p>draw a scary <strong>face</strong> for the <em>scarecrow</em> in the village!</p>
+      </div>
+      <div class="pg-3 hide">
+        <p><strong>nice!</strong> a great drawing for the scrunkly village.</p>
+        <p>you've just saved their christmas dinner!</p>
+      </div>
+      <div class="pg-4 hide">
+        <p>hm... there are <strong>a few more things</strong> you need to help them with.</p>
+        <p>use your powers well!</p>
+      </div>
+      <div class="pg-5 hide">
+        <p>draw a cool <strong>star</strong> for the <em>christmas tree!</em></p>
+        <p>it would look even cooler if you <strong>colored it in</strong>.</p>
+      </div>
+      <div class="pg-6 hide">
+        <p>you're literally doing so well!</p>
+        <p>the scrunklies are enjoying this so much...</p>
+      </div>
+      <div class="pg-7 hide">
+        <p>and of course, their final <strong>request</strong>...</p>
+        <p>let's <em>help!</em></p>
+      </div>
+      <div class="pg-8 hide">
+        <p>draw nice <strong>text</strong> saying <strong> merry christmas</strong> to put into the sign! :D</p>
+      </div>
+      <div class="pg-9 hide">
+        <p>you're <em>brilliant!</em></p>
+      </div>
+      <div class="pg-10 hide">
+        <p><strong>the end!</strong></p>
+        <p>i hope you enjoyed :) have a good christmas!</p>
+        <p>you can now download all the images that you've drawn — or the <em>group photo</em> :)</p>
+        <p><small>if you want to replay — just <strong>reload</strong> the page!</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="content">
+      <div class="info">
+        <div class="pg-0 hide">
+          <p>start by drawing a little scrunkly using the canvas on the <strong>right</strong> :D</p>
+          <p>that's <em>you!</em></p>
+          <p><small>sorry for not having an undo button. :p</small></p>
+          <img class="character" src="images/welcome.png"  alt="">
+        </div>
+
+        <div class="dialogue pg-1 hide">
+          <img class="character" src="images/talk.png" alt=""></img>
+
+          <div class="">
+            <p>— hello!!!!</p>
+            <p class="right">hi!! —</p>
+            <p>— village is in shambles DDDD: we have a farm, but our scarecrow isn't <em>scary</em> enough. all the birds are eating our crops!!! we have no food!!!</p>
+            <p class="right">oh noooo :( —</p>
+            <p>— will you help us draw a <em>superrr scary</em> scarecrow?</p>
+          </div>
+          <img class="character load-1" data-load="character"></img>
+        </div>
+
+        <div class="pg-2 hide">
+          <img class="character" src="images/scarecrow.png" alt="">
+        </div>
+
+        <div class="dialogue pg-3 hide">
+          <img class="character-large" src="images/yay.png" alt="">
+          <div class="">
+            <p>— yayy!!! thank you!!!!!</p>
+            <p>— we have food again!!!!</p>
+            <p>— woohoooo!!!!</p>
+          </div>
+
+          <div class="" style="display: flex; align-items: flex-end; position: relative">
+            <img class="character" src="images/scarecrow.png" alt="">
+            <img id="scarecrow-face" class="load-3" data-load="scarecrow" alt="">
+          </div>
+        </div>
+
+        <div class="dialogue pg-4 hide">
+          <img src="images/tree.png" class="character" alt="">
+          <img src="images/talk.png" class="character-tiny" alt="">
+          <div class="">
+            <p>— hm, another thing... we lost the <em>star</em> on our christmas tree :(</p>
+            <p class="right">that's sad D: —</p>
+            <p>— it is!!! can you help us draw another one? pleaseee...</p>
+          </div>
+          <!-- <img src="images/sketch.png" class="character-tiny" alt=""> -->
+          <img class="character-tiny load-4" data-load="character"></img>
+        </div>
+
+        <div class="pg-5 hide" style="display: flex; justify-content: center;">
+          <img src="images/tree.png" class="character" alt="">
+        </div>
+
+        <div class="dialogue pg-6 hide">
+          <div class="" style="display: flex; align-items: flex-end; position: relative">
+            <img src="images/tree.png" class="character" alt="">
+            <!-- <img id="tree-star" src="images/sketch.png" alt=""> -->
+            <img id="tree-star" class="load-6" data-load="star" alt="">
+          </div>
+          <img src="images/yay.png" class="character-large" alt="">
+          <div class="">
+            <p>— hell yeah!!</p>
+            <p>— yayy!!! we have a <em>star</em> again!!</p>
+            <p>— this is <em>awesome!!!</em></p>
+
+          </div>
+
+        </div>
+
+        <div class="dialogue pg-7 hide">
+          <img class="character" src="images/talk.png" alt="">
+          <div class="">
+            <p>— thank you so much! you're literally the best. ❤️</p>
+            <p class="right">absolutely no problem at all :) —</p>
+            <p>— we just have one last request.....</p>
+            <p>— we need a pretty <strong>sign</strong> at our main gate to show off our <em>christmas spirit!</em></p>
+            <p>— will you help us draw a cool <strong>merry christmas</strong> sign?</p>
+          </div>
+          <img class="character load-7" data-load="character"></img>
+
+
+        </div>
+
+        <div class="pg-8 hide">
+          <img src="images/sign.png" class="character-mid" alt="">
+
+        </div>
+
+        <div class="dialogue pg-9 hide">
+          <div class="" style="display: flex; align-items: flex-end; position: relative">
+            <img src="images/sign.png" class="character" alt="">
+            <!-- <img id="sign" class="character" src="images/sketch.png" alt=""> -->
+
+            <img id="sign" class="character load-9" data-load="sign" alt="">
+
+          </div>
+          <img src="images/yay.png" class="character" alt="">
+          <div class="">
+            <p>— that's perfect! omg!</p>
+            <p>— we love you!!</p>
+            <p class="right">aw, thank you! i love you all tooooo —</p>
+            <p>— hey everyone — let's take a picture together with our <em>hero!</em></p>
+          </div>
+          <!-- <img class="character-tiny" src="images/sketch.png" alt=""> -->
+
+          <img class="character-tiny load-9" data-load="character"></img>
+
+        </div>
+
+        <div class="pg-10 hide" style="display: flex; flex-flow: column; align-items: center; gap: 20px;">
+          <canvas id="group-pic"></canvas>
+          <button class="download" id="gp-dl">download!</button>
+          <hr>
+
+          <div class="">
+              <img class="load-10" data-load="character" alt="">
+              <button class="download" id="character-dl">download!</button>
+          </div>
+
+          <div class="">
+              <img class="load-10" data-load="scarecrow" alt>
+              <button class="download" id="scarecrow-dl">download!</button>
+          </div>
+          <div class="">
+              <img class="load-10" data-load="star" alt="">
+              <button class="download" id="star-dl">download!</button>
+
+          </div>
+          <div class="">
+              <img class="load-10" data-load="sign" alt="">
+
+              <button class="download" id="sign-dl">download!</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div id="draw">
+        <canvas id="canvas"></canvas>
+        <div class="nav">
+            <div class="clr" style="background-color: #FFF" data-width=5></div>
+            <div class="clr" style="background-color: #FF6663" data-width=5></div>
+            <div class="clr" style="background-color: #FEB144" data-width=5></div>
+            <div class="clr" style="background-color: #F0F08F" data-width=5></div>
+            <div class="clr" style="background-color: #9EE09E" data-width=5></div>
+            <div class="clr" style="background-color: #9EC1CF" data-width=5></div>
+            <div class="clr" style="background-color: #CC99C9" data-width=5></div>
+
+            <div class="clr eraser" data-width=25><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M5.662 23l-5.369-5.365c-.195-.195-.293-.45-.293-.707 0-.256.098-.512.293-.707l14.929-14.928c.195-.194.451-.293.707-.293.255 0 .512.099.707.293l7.071 7.073c.196.195.293.451.293.708 0 .256-.097.511-.293.707l-11.216 11.219h5.514v2h-12.343zm3.657-2l-5.486-5.486-1.419 1.414 4.076 4.072h2.829zm6.605-17.581l-10.677 10.68 5.658 5.659 10.676-10.682-5.657-5.657z"/></svg></div>
+            <button class="clear">clear</button>
+        </div>
+      </div>
+
+      <div class="last">
+        <button class="done">
+          <p><em id="buttontext">ok! ></em></p>
+        </button>
+      </div>
+
+
+
+      <!--<button class="save">save</button>-->
+      <!-- <button class="download hide">download</button> -->
+      <!--
+      <img id="canvasload" src="" alt="">
+      <button class="AAA">AAAAA</button> -->
+    </div>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+
+
+
+  </body>
+</html>

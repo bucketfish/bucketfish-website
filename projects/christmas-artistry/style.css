@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Roboto:ital,wght@0,300;0,700;1,300&display=swap');
+
+
+:root {
+  --dark: #141B41;
+  --light: #F5EFED;
+  --purple: #9B91DE;
+  --pink: #FFC2C2;
+  --green: #9AD5CA;
+  --hr-gradient: linear-gradient(to right, transparent 0%, var(--purple) 20%, var(--purple) 80%, transparent 100%);
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  color: var(--light);
+  font-weight: 300;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark);
+}
+
+h1 {
+  margin: 10px 0;
+  margin-bottom: 35px;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  text-align: center;
+  color: var(--pink);
+}
+
+
+h2 {
+  margin: 10px 0;
+  margin-bottom: 35px;
+  font-size: 64px;
+  font-weight: bold;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  text-align: center;
+  color: var(--purple);
+}
+
+
+p {
+  margin: 20px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+em {
+  font-family: 'Liu Jian Mao Cao', cursive;
+  font-size: 1.15em;
+  position: relative;
+  top: -1.6px;
+  font-style: normal;
+}
+
+strong {
+  font-weight: normal;
+  color: var(--green);
+}
+
+
+button{
+  border: none;
+  outline: none;
+
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+small {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+hr {
+  border: 0;
+  background-image: var(--hr-gradient);
+  height: 3px;
+  width: 70%;
+}
+
+
+canvas {
+  display: block;
+}
+
+.intro {
+  padding-top: 50px;
+}
+
+
+.content {
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+}
+
+
+.info {
+  height: 100%;
+  min-width: 30%;
+  flex-grow: 4;
+  /* border: 1px solid var(--green); */
+}
+
+.info .pg-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.last {
+  height: 100%;
+  width: 10%;
+  flex-shrink: 0;
+
+}
+
+#draw {
+  background-color: var(--purple);
+  border-radius: 20px;
+  aspect-ratio: 60 / 50;
+  width: 45%;
+  /* height: 480px; */
+  padding: 10px;
+  flex-shrink: 0;
+  /* margin: 0 auto; */
+
+}
+
+#canvas {
+  aspect-ratio: 60 / 48;
+  width: 100%;
+  /* height: 90%; */
+  /* height: 100%; */
+  background-color: var(--dark);
+  border-radius: 10px;
+  /* margin-top: -50px; */
+}
+
+
+.nav{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.clr{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 3px solid var(--light);
+  transition: transform .3s;
+  background-color: var(--data-clr);
+}
+.clr:hover{
+    transform: scale(1.2);
+}
+
+.clr.eraser {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.clear {
+  padding: 5px 20px;
+  border-radius: 20px;
+  height: 36px;
+  background-color: var(--light);
+}
+
+
+.done {
+  background-color: var(--pink);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.done:hover {
+  background-color: var(--purple);
+
+}
+
+.done p {
+  font-size: 1.7em;
+  color: var(--dark);
+
+}
+
+
+.character-tiny {
+  width: 10vw;
+}
+
+.character {
+  width: 20vw;
+}
+
+.character-mid {
+  width: 30vw;
+}
+
+.character-large {
+  width: 40vw;
+}
+
+.dialogue {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.dialogue.pg-2 div {
+  flex-grow: 4;
+}
+
+.dialogue p {
+  text-align: left;
+  color: var(--green);
+  padding-right: 30px;
+}
+
+.dialogue .right {
+  padding-left: 30px;
+  padding-right: 0;
+  text-align: right;
+  color: var(--light);
+}
+
+
+
+.hide {
+  display: none !important;
+}
+
+
+
+#scarecrow-face {
+  position: absolute;
+  width: 7vw;
+  top: 6.7vw;
+  left: 6vw;
+}
+
+#tree-star {
+  position: absolute;
+  width: 10vw;
+  top: 1vw;
+  left: 5.5vw;
+
+}
+
+#sign {
+  position: absolute;
+  width: 15vw;
+  top: 7vw;
+  left: 2.2vw;
+  rotate: -7deg;
+}
+
+#group-pic {
+  width: 900px;
+  height: 550px;
+  border: 3px solid var(--light);
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+
+
+div.pg-10 img {
+  width: 30vw;
+}
+
+button.download {
+  background-color: var(--pink);
+  font-family: 'Liu Jian Mao Cao', cursive;
+  /* font-style: italic; */
+  font-size: 32px;
+  /* font-weight: bold; */
+}
+
+button.download:hover {
+  background-color: var(--purple);
+}
+
+div.pg-10 div {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+div.pg-10 div img {
+  width: 30vw;
+  border: 3px solid var(--light);
+  border-radius: 20px;
+
+}
+
+#desktop {
+  display: none;
+}
+
+
+@media  (max-aspect-ratio: 1/1) {
+  #desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--pink);
+    color: var(--dark);
+    position: fixed;
+    padding: 20px 50px;
+    z-index: 5;
+    box-sizing: border-box;
+  }
+
+  #desktop h1 {
+    color: var(--purple);
+    font-size: 4em;
+  }
+
+  #desktop button {
+    display: block;
+    margin: 0 auto;
+  }
+
+}
