@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>fish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  </head>
+  <body>
+    <svg class="back">
+      <filter id="noiseFilter" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+        <!-- <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.03" numOctaves="1"/> -->
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" seed="15" stitchTiles="stitch" result="turbulence"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="25"></feDisplacementMap>
+      </filter>
+
+      <filter id="noiseFilterLess" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+        <!-- <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.03" numOctaves="1"/> -->
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" seed="15" stitchTiles="stitch" result="turbulence"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="25"></feDisplacementMap>
+      </filter>
+
+      <filter id="noiseFilterTiny" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+        <!-- <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.03" numOctaves="1"/> -->
+        <feTurbulence type="fractalNoise" baseFrequency="0.002" numOctaves="4" seed="15" stitchTiles="stitch" result="turbulence"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="15"></feDisplacementMap>
+      </filter>
+    </svg>
+
+
+    <div class="background">
+      <div class="special_fishes">
+        <p class="special_fish" style="left: 0vw;bottom: 0;rotate: 12deg;">fish</p>
+        <p class="special_fish" style="left: 14vw;bottom: 3vw;rotate: 38deg;">fish</p>
+        <p class="special_fish" style="left: 32vw;bottom: -2vw;rotate: 342deg;">fish</p>
+        <p class="special_fish" style="left: 82vw;bottom: -3vw;rotate: 8deg;">fish</p>
+        <p class="special_fish" style="left: 68vw;bottom:1vw;rotate: 330deg;">fish</p>
+        <p class="special_fish" style="left: 82vw;bottom: 6vw;rotate: 21deg;">fish</p>
+        <p class="special_fish" style="left: 50vw;bottom: -1vw;rotate: 1deg;">fish</p>
+        <p class="special_fish" style="left: 25vw;bottom: 6vw;rotate: 12deg;">fish</p>
+        <p class="special_fish" style="left: 4vw;rotate: -20deg;bottom: 11vw;">fish</p>
+        <p class="special_fish" style="left: 59vw;bottom: 6vw;rotate: 345deg;">fish</p>
+        <p class="special_fish" style="left: 47vw;bottom: 10vw;rotate: 303deg;">fish</p>
+        <p class="special_fish" style="left: 37vw;bottom: 13vw;rotate: -30deg;">fish</p>
+        <p class="special_fish" style="left: 58vw;bottom: 16vw;rotate: 39deg;">fish</p>
+        <p class="special_fish" style="left: 48vw;bottom: 27vw;rotate: -2deg;">fish</p>
+      </div>
+    </div>
+
+    <!-- <img class="back" id="cursor_fish" src="assets/cursor_fish.png" alt=""></img> -->
+
+
+    <div class="content">
+      <div class="hor">
+        <h1 class="title distort">that<br/>fish<br/>house</h1>
+        <h1 class="fish-title distort" id="fish-icon" style="font-size: 18em; margin: 0; rotate: 20deg; pointer-events: none;">🐟</h2>
+      </div>
+      <p><em>thatfishhouse</em> is an experiment in design by <a href="https://bucketfish.me">bucketfish</a>. please enjoy this little goofy place.</p>
+      <p>this design is inspired by something i saw at the airport</p>
+      <div class="hor">
+        <div class="">
+          <h2>fresh fish daily</h2>
+          <img src="assets/cursor_fish.png" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="">
+          <h2>really cute fish too.</h2>
+          <ol>
+            <li>they have big eyes</li>
+            <li>they are not creepy</li>
+            <li>they like to sleep!</li>
+          </ol>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <hr/>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </div>
+
+      </div>
+
+      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+    </div>
+
+  <!-- <script src="script.js"></script> -->
+
+  </body>
+
+
+</html>
